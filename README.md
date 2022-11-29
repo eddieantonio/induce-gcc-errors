@@ -1,6 +1,28 @@
-Trying to induce the top 20 errors from Cormac Murray's 2019 MSc Thesis.
+# C errors
+
+This repository induces the top 20 errors from Cormac Murray's 2019 MSc Thesis.
+
+# How to use
+
+You will need:
+
+ - gcc-12
+ - [aha](https://github.com/theZiz/aha) (to generate coloured HTML)
+
+Then run:
+
+    make
 
 # Errors
+
+This list of errors comes from §8.1.2 (page 92) from Cormac's thesis.
+The "e" codes were invented for the purposes of the thesis. The errors
+are ranked from most frequently occurring to least frequently occurring.
+These are messages that appear at ANY level in the output (not just the
+first error message).
+
+I used gcc-12 on macOS, but I believe Cormac's errors come from an
+Ubuntu machine -- thus linking errors will be different.
 
 1. e1001: _`<x>` undeclared (first use in this function)._
 2. e1002: _expected `<x>` before `<y>`_
