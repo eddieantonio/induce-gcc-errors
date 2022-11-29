@@ -11,7 +11,7 @@ OUTPUTS = $(SOURCES:.c=.html) $(SOURCES:.c=.txt)
 all: $(OUTPUTS)
 
 %.html: %.c
-	gcc-12 $< -o/dev/null -fdiagnostics-color=always 2>&1 | aha --no-header > $@
+	gcc-12 $< -o/dev/null -fdiagnostics-color=always 2>&1 | aha --no-header | ./fix-html.sh > $@
 
 %.txt: %.c
 	gcc-12 $< -o/dev/null 2>&1 | tee $@
