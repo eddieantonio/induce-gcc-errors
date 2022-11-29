@@ -44,3 +44,11 @@ I have absolutely no idea how to get this without a cascading error. This error 
 ## e1003: undefined reference to `<x>`
 
 This is a linker error, and as such, is dependent on the platform's linker. I have committed the version from a glibc-style linker.
+
+
+## e1015: missing terminating " character
+
+I cannot seem to get this without:
+
+ 1. a warning with the same message
+ 2. a cascading error, due to error recovery
