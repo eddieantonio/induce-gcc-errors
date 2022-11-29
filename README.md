@@ -26,3 +26,17 @@ Trying to induce the top 20 errors from Cormac Murray's 2019 MSc Thesis.
 ---
 
 21. `<x>: No such file or directory`
+
+# Notes
+
+## e1034: expected declaration specifiers before 'if'
+
+I have absolutely no idea how to get this without a cascading error. This error message can be induced by writing a statement after the function declaration, but missing the opening curly brace for a function definition.
+
+```
+18-e1034.c: In function 'main':
+18-e1034.c:2:5: error: expected declaration specifiers before 'if'
+    2 |     if (argc == 1)
+      |     ^~
+18-e1034.c:4: error: expected '{' at end of input
+```
