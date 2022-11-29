@@ -1,0 +1,2 @@
+<source>:8: undefined reference to `quack'
+collect2: error: ld returned 1 exit status

@@ -40,3 +40,7 @@ I have absolutely no idea how to get this without a cascading error. This error 
       |     ^~
 18-e1034.c:4: error: expected '{' at end of input
 ```
+
+## e1003: undefined reference to `<x>`
+
+This is a linker error, and as such, is dependent on the platform's linker. I have committed the version from a glibc-style linker.

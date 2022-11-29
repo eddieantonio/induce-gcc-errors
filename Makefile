@@ -16,6 +16,11 @@ all: $(OUTPUTS)
 %.txt: %.c
 	gcc-12 $< -o/dev/null 2>&1 | tee $@
 
-
 clean:
 	$(RM) $(wildcard *.html) $(wildcard *.txt)
+
+# Special cases:
+
+# Do not rebuild these from the .c file.
+12-e1003.html 12-e1003.txt:
+	true
