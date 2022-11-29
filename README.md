@@ -2,7 +2,7 @@ Trying to induce the top 20 errors from Cormac Murray's 2019 MSc Thesis.
 
 # Errors
 
-1. _'<x>' undeclared (first use in this function)._
+1. _`<x>` undeclared (first use in this function)._
 2. _expected `<x>` before `<y>`_
 3. _stray `<x>` in program_ (try `$`?)
 4. _expected expression before `<x>`_
