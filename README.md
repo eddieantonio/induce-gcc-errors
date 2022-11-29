@@ -10,7 +10,7 @@ Trying to induce the top 20 errors from Cormac Murray's 2019 MSc Thesis.
 6. e1005: _expected declaration or statement at end of input_
 7. e1008: _expected identifier or `(` before `<x>`_
 8. e1006: _expected `=`, `,`, `;`, `asm`, `__attribute__` before `<x>`_
-9. e1023: _request for member in `<x>` not a structure or union_ (try `.foo`)
+9. e1023: _request for member in something not a structure or union_ (try `.foo`)
 10. e1044: _expected declaration specifiers or '...' before `<x>`_
 11. e1012: _`<x>` has no member named `<y>`_
 12. e1003: _undefined reference to `<x>`_
