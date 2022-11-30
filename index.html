@@ -168,6 +168,14 @@ collect2: error: ld returned 1 exit status</code></pre>
 <pre><code><span style="font-weight:bold;">cc1:</span> <span style="font-weight:bold;color:red;">fatal error: </span>21-e1009.c: No such file or directory
 compilation terminated.</code></pre>
 
+<h1>22. e1014</h1>
+<pre><code><span style="font-weight:bold;">22-e1014.c:2:5:</span> <span style="font-weight:bold;color:red;">error: </span>conflicting types for '<span style="font-weight:bold;">main</span>'; have '<span style="font-weight:bold;">int(int,  char **)</span>'
+    2 | int <span style="font-weight:bold;color:red;">main</span>(int argc, char*argv[]) {
+      |     <span style="font-weight:bold;color:red;">^~~~</span>
+<span style="font-weight:bold;">22-e1014.c:1:5:</span> <span style="font-weight:bold;color:teal;">note: </span>previous declaration of '<span style="font-weight:bold;">main</span>' with type '<span style="font-weight:bold;">int(void)</span>'
+    1 | int <span style="font-weight:bold;color:teal;">main</span>(void);
+      |     <span style="font-weight:bold;color:teal;">^~~~</span></code></pre>
+
 
 </body>
 </html>
