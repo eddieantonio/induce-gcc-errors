@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+@media (prefers-color-scheme: light) {
+  :root {
+    --fg-color: black;
+    --bg-color: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg-color: #efefef;
+    --bg-color: #1E232B;
+  }
+  pre {
+    filter: saturate(1000%);
+  }
+}
+
+body {
+  max-width: 40rem;
+  margin-inline: auto;
+  font-family: system-ui;
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+}
+pre {
+  padding: 1rem;
+  overflow-x: clip;
+  white-space: pre-wrap;
+}
+    </style>
+</head>
+<body>
+
+<h1>1. e1001</h1>
+<pre><code><span style="font-weight:bold;">01-e1001.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">01-e1001.c:2:12:</span> <span style="font-weight:bold;color:red;">error: </span>'<span style="font-weight:bold;">duck</span>' undeclared (first use in this function)
+    2 |     return <span style="font-weight:bold;color:red;">duck</span>;
+      |            <span style="font-weight:bold;color:red;">^~~~</span>
+<span style="font-weight:bold;">01-e1001.c:2:12:</span> <span style="font-weight:bold;color:teal;">note: </span>each undeclared identifier is reported only once for each function it appears in</code></pre>
+
+<h1>2. e1002</h1>
+<pre><code><span style="font-weight:bold;">02-e1002.c:1:6:</span> <span style="font-weight:bold;color:red;">error: </span>expected '<span style="font-weight:bold;">;</span>' before '<span style="font-weight:bold;">int</span>'
+    1 | int x
+      |      <span style="font-weight:bold;color:red;">^</span>
+      |      <span style="color:green;">;</span>
+    2 | <span style="color:green;">int</span> y;
+      | <span style="color:green;">~~~</span>   </code></pre>
+
+<h1>3. e1007</h1>
+<pre><code><span style="font-weight:bold;">03-e1007.c:1:24:</span> <span style="font-weight:bold;color:red;">error: </span>stray '<span style="font-weight:bold;">`</span>' in program
+    1 | int number_of_quacks = <span style="font-weight:bold;color:red;">`</span>0;
+      |                        <span style="font-weight:bold;color:red;">^</span></code></pre>
+
+<h1>4. e1004</h1>
+<pre><code><span style="font-weight:bold;">04-e1004.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">04-e1004.c:2:12:</span> <span style="font-weight:bold;color:red;">error: </span>expected expression before '<span style="font-weight:bold;">int</span>'
+    2 |     return <span style="font-weight:bold;color:red;">int</span>;
+      |            <span style="font-weight:bold;color:red;">^~~</span></code></pre>
+
+<h1>5. e1010</h1>
+<pre><code><span style="font-weight:bold;">05-e1010.c:1:1:</span> <span style="font-weight:bold;color:red;">error: </span>unknown type name '<span style="font-weight:bold;">integer</span>'
+    1 | <span style="font-weight:bold;color:red;">integer</span> main(int argc, char** argv) {
+      | <span style="font-weight:bold;color:red;">^~~~~~~</span></code></pre>
+
+<h1>6. e1005</h1>
+<pre><code><span style="font-weight:bold;">06-e1005.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">06-e1005.c:1:1:</span> <span style="font-weight:bold;color:red;">error: </span>expected declaration or statement at end of input
+    1 | <span style="font-weight:bold;color:red;">int</span> main() {
+      | <span style="font-weight:bold;color:red;">^~~</span></code></pre>
+
+<h1>7. e1006</h1>
+<pre><code><span style="font-weight:bold;">07-e1006.c:1:11:</span> <span style="font-weight:bold;color:red;">error: </span>expected identifier or '<span style="font-weight:bold;">(</span>' before '<span style="font-weight:bold;">char</span>'
+    1 | int argc, <span style="font-weight:bold;color:red;">char</span>*argv[]) {
+      |           <span style="font-weight:bold;color:red;">^~~~</span></code></pre>
+
+<h1>8. e1006</h1>
+<pre><code><span style="font-weight:bold;">08-e1006.c:1:9:</span> <span style="font-weight:bold;color:red;">error: </span>expected '<span style="font-weight:bold;">=</span>', '<span style="font-weight:bold;">,</span>', '<span style="font-weight:bold;">;</span>', '<span style="font-weight:bold;">asm</span>' or '<span style="font-weight:bold;">__attribute__</span>' before '<span style="font-weight:bold;">&lt;</span>' token
+    1 | include <span style="font-weight:bold;color:red;">&lt;</span>stdio.h&gt;
+      |         <span style="font-weight:bold;color:red;">^</span></code></pre>
+
+<h1>9. e1023</h1>
+<pre><code><span style="font-weight:bold;">09-e1023.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">09-e1023.c:2:16:</span> <span style="font-weight:bold;color:red;">error: </span>request for member '<span style="font-weight:bold;">length</span>' in something not a structure or union
+    2 |     return argv<span style="font-weight:bold;color:red;">.</span>length;
+      |                <span style="font-weight:bold;color:red;">^</span></code></pre>
+
+<h1>10. e1044</h1>
+<pre><code><span style="font-weight:bold;">10-e1044.c:1:8:</span> <span style="font-weight:bold;color:red;">error: </span>expected declaration specifiers or '<span style="font-weight:bold;">...</span>' before string constant
+    1 | printf(<span style="font-weight:bold;color:red;">&quot;hello, world\n&quot;</span>);
+      |        <span style="font-weight:bold;color:red;">^~~~~~~~~~~~~~~~</span></code></pre>
+
+<h1>11. e1012</h1>
+<pre><code><span style="font-weight:bold;">11-e1012.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">11-e1012.c:7:16:</span> <span style="font-weight:bold;color:red;">error: </span>'<span style="font-weight:bold;">Duck</span>' has no member named '<span style="font-weight:bold;">quack</span>'
+    7 |     return duck<span style="font-weight:bold;color:red;">.</span>quack;
+      |                <span style="font-weight:bold;color:red;">^</span></code></pre>
+
+<h1>12. e1003</h1>
+<pre><code>&lt;source&gt;:8: undefined reference to `quack&apos;
+collect2: error: ld returned 1 exit status</code></pre>
+
+<h1>13. e1013</h1>
+<pre><code><span style="font-weight:bold;">13-e1013.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">13-e1013.c:2:16:</span> <span style="font-weight:bold;color:red;">error: </span>invalid type argument of '<span style="font-weight:bold;">-&gt;</span>' (have '<span style="font-weight:bold;">int</span>')
+    2 |     return argc<span style="font-weight:bold;color:red;">-&gt;</span>length;
+      |                <span style="font-weight:bold;color:red;">^~</span></code></pre>
+
+<h1>14. e1030</h1>
+<pre><code><span style="font-weight:bold;">14-e1030.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">14-e1030.c:3:19:</span> <span style="font-weight:bold;color:red;">error: </span>expected '<span style="font-weight:bold;">)</span>' before numeric constant
+    3 |     printf<span style="color:blue;">(</span>&quot;%d %d&quot;<span style="font-weight:bold;color:red;"> </span><span style="color:green;">42</span>);
+      |           <span style="color:blue;">~</span>       <span style="font-weight:bold;color:red;">^</span><span style="color:green;">~~</span>
+      |                   <span style="color:green;">)</span></code></pre>
+
+<h1>15. e1017</h1>
+<pre><code><span style="font-weight:bold;">15-e1017.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">15-e1017.c:3:5:</span> <span style="font-weight:bold;color:red;">error: </span>too few arguments to function '<span style="font-weight:bold;">quack</span>'
+    3 |     <span style="font-weight:bold;color:red;">quack</span>();
+      |     <span style="font-weight:bold;color:red;">^~~~~</span>
+<span style="font-weight:bold;">15-e1017.c:1:6:</span> <span style="font-weight:bold;color:teal;">note: </span>declared here
+    1 | void <span style="font-weight:bold;color:teal;">quack</span>(int);
+      |      <span style="font-weight:bold;color:teal;">^~~~~</span></code></pre>
+
+<h1>16. e1011</h1>
+<pre><code><span style="font-weight:bold;">16-e1011.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">16-e1011.c:2:5:</span> <span style="font-weight:bold;color:red;">error: </span>lvalue required as increment operand
+    2 |     <span style="font-weight:bold;color:red;">++</span>1;
+      |     <span style="font-weight:bold;color:red;">^~</span></code></pre>
+
+<h1>17. e1022</h1>
+<pre><code><span style="font-weight:bold;">17-e1022.c:1:10:</span> <span style="font-weight:bold;color:red;">error: </span>expected declaration specifiers or '<span style="font-weight:bold;">...</span>' before numeric constant
+    1 | int main(<span style="font-weight:bold;color:red;">42</span>) {
+      |          <span style="font-weight:bold;color:red;">^~</span></code></pre>
+
+<h1>18. e1034</h1>
+<pre><code><span style="font-weight:bold;">18-e1034.c:</span> In function '<span style="font-weight:bold;">main</span>':
+<span style="font-weight:bold;">18-e1034.c:2:5:</span> <span style="font-weight:bold;color:red;">error: </span>expected declaration specifiers before '<span style="font-weight:bold;">if</span>'
+    2 |     <span style="font-weight:bold;color:red;">if</span> (argc == 1)
+      |     <span style="font-weight:bold;color:red;">^~</span>
+<span style="font-weight:bold;">18-e1034.c:4:</span> <span style="font-weight:bold;color:red;">error: </span>expected '<span style="font-weight:bold;">{</span>' at end of input</code></pre>
+
+<h1>19. e1015</h1>
+<pre><code><span style="font-weight:bold;">19-e1015.c:1:17:</span> <span style="font-weight:bold;color:purple;">warning: </span>missing terminating &quot; character
+    1 | char* message = <span style="font-weight:bold;color:purple;">&quot;</span>
+      |                 <span style="font-weight:bold;color:purple;">^</span>
+<span style="font-weight:bold;">19-e1015.c:1:17:</span> <span style="font-weight:bold;color:red;">error: </span>missing terminating &quot; character
+<span style="font-weight:bold;">19-e1015.c:2:1:</span> <span style="font-weight:bold;color:red;">error: </span>expected expression before '<span style="font-weight:bold;">;</span>' token
+    2 | <span style="font-weight:bold;color:red;">;</span>
+      | <span style="font-weight:bold;color:red;">^</span></code></pre>
+
+<h1>20. e1020</h1>
+<pre><code><span style="font-weight:bold;">20-e1020.c:2:5:</span> <span style="font-weight:bold;color:red;">error: </span>redefinition of '<span style="font-weight:bold;">constant</span>'
+    2 | int <span style="font-weight:bold;color:red;">constant</span> = 9;
+      |     <span style="font-weight:bold;color:red;">^~~~~~~~</span>
+<span style="font-weight:bold;">20-e1020.c:1:5:</span> <span style="font-weight:bold;color:teal;">note: </span>previous definition of '<span style="font-weight:bold;">constant</span>' with type '<span style="font-weight:bold;">int</span>'
+    1 | int <span style="font-weight:bold;color:teal;">constant</span> = 42;
+      |     <span style="font-weight:bold;color:teal;">^~~~~~~~</span></code></pre>
+
+
+</body>
+</html>
+

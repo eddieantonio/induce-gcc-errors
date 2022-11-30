@@ -6,18 +6,19 @@ CC = gcc-12
 # rustc example.rs --color=always 2>&1 | aha --no-header | pbcopy
 
 SOURCES := $(wildcard *.c)
-OUTPUTS = $(SOURCES:.c=.html) $(SOURCES:.c=.txt)
+HTMLS = $(SOURCES:.c=.html) 
+TXTX = $(SOURCES:.c=.txt)
 
-all: $(OUTPUTS)
+all: $(HTMLS) $(TXTS) index.html
+
+index.html: $(HTMLS)
+	./make-index.py > $@
 
 %.html: %.c
 	gcc-12 $< -o/dev/null -fdiagnostics-color=always 2>&1 | aha --no-header | ./fix-html.sh > $@
 
 %.txt: %.c
 	gcc-12 $< -o/dev/null 2>&1 | tee $@
-
-clean:
-	$(RM) $(wildcard *.html) $(wildcard *.txt)
 
 # Special cases:
 

@@ -1,6 +1,7 @@
 # C errors
 
-This repository induces the top 20 errors from Cormac Murray's 2019 MSc Thesis.
+This repository induces the top 20 C error messages from Cormac Murray's
+2019 MSc Thesis.
 
 # How to use
 
