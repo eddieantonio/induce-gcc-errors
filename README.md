@@ -23,32 +23,30 @@ These are messages that appear at ANY level in the output (not just the
 first error message).
 
 I used gcc-12 on macOS, but I believe Cormac's errors come from an
-Ubuntu machine -- thus linking errors will be different.
+Ubuntu machine—thus linker errors might be formatted differently.
 
-1. e1001: _`<x>` undeclared (first use in this function)._
-2. e1002: _expected `<x>` before `<y>`_
-3. e1007: _stray `<x>` in program_ (try `$`?)
-4. e1004: _expected expression before `<x>`_
-5. e1010: _unknown type name `<x>`_
-6. e1005: _expected declaration or statement at end of input_
-7. e1008: _expected identifier or `(` before `<x>`_
-8. e1006: _expected `=`, `,`, `;`, `asm`, `__attribute__` before `<x>`_
-9. e1023: _request for member in something not a structure or union_ (try `.foo`)
-10. e1044: _expected declaration specifiers or '...' before `<x>`_
-11. e1012: _`<x>` has no member named `<y>`_
-12. e1003: _undefined reference to `<x>`_
-13. e1013: _invalid type argument of `<...>`_
-14. e1030: _expected `<x>` before `<...>` constant_
-15. e1017: _too few arguments to function `<x>`_
-16. e1011: _lvalue required as `<...>`_ (try `1 = x`?)
-17. e1022: _expected declaration specifiers or '...' before `<...>` constant_
-18. e1034: _expected declaration specifiers before `<x>`_
-19. e1015: _missing terminating `<x>` character_ (try open character literal?)
-20. e1020: _redefinition of `<x>`_
-
----
-
-21. `<x>: No such file or directory`
+| Rank | Code  | Error Category |
+|-----:|-------|----------------|
+|    1 | e1001 | `<x>` undeclared `<...>` |
+|    2 | e1002 | expected `<x>` before `<y>` |
+|    3 | e1007 | stray `<x>` in program |
+|    4 | e1004 | expected expression before `<x>` |
+|    5 | e1010 | unknown type name `<x>` |
+|    6 | e1005 | expected declaration or statement at end of input |
+|    7 | e1008 | expected identifier or `(` before `<x>` |
+|    8 | e1006 | expected `=`, `,`, `;`, `asm`, `__attribute__` before `<x>` |
+|    9 | e1023 | request for member in something not a structure or union |
+|   10 | e1044 | expected declaration specifiers or '...' before `<x>` |
+|   11 | e1012 | `<x>` has no member named `<y>` |
+|   12 | e1003 | undefined reference to `<x>` |
+|   13 | e1013 | invalid type argument of `<...>` |
+|   14 | e1030 | expected `<x>` before `<...>` constant |
+|   15 | e1017 | too few arguments to function `<x>` |
+|   16 | e1011 | lvalue required as `<...>` |
+|   17 | e1022 | expected declaration specifiers or '...' before `<...>` constant  |
+|   18 | e1034 | expected declaration specifiers before `<x>` |
+|   19 | e1015 | missing terminating `<x>` character |
+|   20 | e1020 | redefinition of `<x>` |
 
 # Notes
 
